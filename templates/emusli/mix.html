@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/static/css/custom.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/static/css/jquery.jscrollpane.css" media="screen,projection" />
+    <script type="text/javascript" src="/static/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="/static/js/mwheelIntent.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+            /*$('.scroll-pane').jScrollPane();
+            $('.scroll-pane').height(function() {
+                return $(window).height() * 0.4;
+            });
+
+            $(window).scroll(function (event) {
+
+                //y = current top position of window
+                var y_pos = $(this).scrollTop();
+                var current_mix_title = $('.current-mix-section').text();
+
+                $('.mix-section').each(function() {
+                    // if y_pos, the current top position of window, is past an element change the Title to that element's text.
+                    if (y_pos > $(this).offset().top) {
+                         current_mix_title = $(this).text() ;
+                    }
+                });
+
+                $('.sticky-section').text(current_mix_title)
+            });
+            */
+        });
+    </script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <header>
+        <!-- верхнее меню страницы -->
+        <ul id="slide-out" class="sidenav">
+            <li><a class="waves-effect" href="#">Свой микс</a></li>
+            <li><a class="waves-effect" href="#">Готовые наборы</a></li>
+            <li><a class="waves-effect" href="#">О проекте</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="subheader">FAQ</a></li>
+        </ul>
+        <nav class="">
+            <div class="nav-wrapper white">
+                <ul class="left">
+                    <li><a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a></li>
+                </ul>
+                <a href="#" class="brand-logo">
+                <span class="red-text">Е</span>
+                <span class="orange-text capital">М</span>
+                <span class="red-text">ЮСЛИ</span></a>
+                <ul class="right">
+                    <li><a href="login.html"><i class="material-icons black-text">person</i></a></li>
+                    <li><a href="cart.html"><i class="material-icons black-text">shopping_cart</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="block">
+            <!-- блок с фильтром -->
+            <div class="row">
+                <h5 class="active-header orange accent-1 center">фильтр</h5>
+                <form action="#">
+                    <p>
+                        <label>
+                    <input type="checkbox" class="filled-in  checkbox-amber" checked="checked" />
+                    <span>Вегетерианские</span>
+                </label>
+                    </p>
+                    <p>
+                        <label>
+                    <input type="checkbox" class="filled-in  checkbox-amber" />
+                  <span>С протеином</span>
+                </label>
+                    </p>
+                    <p>
+                        <label>
+                    <input type="checkbox" class="filled-in  checkbox-amber" />
+                  <span>Без лактозы</span>
+                </label>
+                    </p>
+                    <p>
+                        <label>
+                    <input type="checkbox" class="filled-in  checkbox-amber" />
+                  <span>Без зёрен</span>
+                </label>
+                    </p>
+                </form>
+            </div>
+        </section>
+        <section class="block">
+            <!-- блок с миксом -->
+            <h5 class="red darken-2 white-text active-header current-mix-section center">ОСНОВА</h5>
+            <div class="scroll-pane">
+                <div>
+                    <ul class="collection">
+                        <li class="collection-item custom-mix-item">
+                            <!-- image-->
+                            <img src="/static/images/5grains.webp" class="custom-mix-item-image">
+                            <!--title-->
+                            <h6><strong>5 злаков</strong></h6>
+                            <!--short description-->
+                            <p>Изготовлены по классическому рецепту <small>| 300,00 р.</small></p>
+                            <!--detail description-->
+                            <p><small>5 злаков являются самым популярным блюдом среди любителей мюсли.</small></p>
+                            <!-- filter -->
+                            <ul class="custom-mix-item-filter">
+                                <li><img src="/static/images/vegan-filter.svg" alt="вегетерианские"></li>
+                                <li><img src="/static/images/sugarfree-filter.svg" alt="без сахара"></li>
+                                <li><img src="/static/images/protein-filter.svg" alt="с протеином"></li>
+                                <li><img src="/static/images/lactosefree-filter.svg" alt="без лактозы"></li>
+                                <li><img src="/static/images/highfibre-filter.svg" alt="с клетчаткой"></li>
+                            </ul>
+
+                            <!-- ingredients -->
+                            <p><small><i>Ингредиенты:
+                                <strong>овсянные хлопья</strong>,
+                                <strong>ячменные хлопья</strong>,
+                                <strong>пшеничные хлопья</strong>,
+                                <strong>полбяные хлопья</strong>,
+                                <strong>ржаные хлопья</strong>
+                            </i></small></p>
+                        </li>
+                        <li class="collection-item custom-mix-item">
+                            <!-- image-->
+                            <img src="/static/images/oat.webp" class="custom-mix-item-image">
+                            <!--title-->
+                            <h6><strong>Овсянные хлопья</strong></h6>
+                            <!--short description-->
+                            <p>Для английских джентльменов и эстетов <small>| 310,00 р.</small></p>
+                            <!--detail description-->
+                            <p>
+                                <small>
+                                Овсянные хлопья служат идеальной базой для использования разнообразных добавок.
+                                </small>
+                            </p>
+                            <!-- filter -->
+                            <ul class="custom-mix-item-filter">
+                                <li><img src="/static/images/vegan-filter.svg" alt="вегетерианские"></li>
+                                <li><img src="/static/images/sugarfree-filter.svg" alt="без сахара"></li>
+                                <li><img src="/static/images/protein-filter.svg" alt="с протеином"></li>
+                                <li><img src="/static/images/lactosefree-filter.svg" alt="без лактозы"></li>
+                                <li><img src="/static/images/highfibre-filter.svg" alt="с клетчаткой"></li>
+                            </ul>
+
+                            <!-- ingredients -->
+                            <p><small><i>Ингредиенты:
+                                <strong>овсянные хлопья</strong>
+                            </i></small></p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="orange darken-2 white-text active-header mix-section center">ДОПОЛНЕНИЕ</h5>
+                    <ul class="collection">
+                        <li class="collection-item custom-mix-item">
+                            <!-- image-->
+                            <img src="/static/images/barley-addition.webp" class="custom-mix-item-image">
+                            <!--title-->
+                            <h6><strong>Ячменные хлопья</strong></h6>
+                            <!--short description-->
+                            <p>Отборные, натуральные хлопья <small>| 25г за 30,00 р.</small></p>
+                            <!--detail description-->
+                            <p>
+                                <small>
+                                Идеальный компонент для здорового питания.
+                                </small>
+                            </p>
+                            <!-- filter -->
+                            <ul class="custom-mix-item-filter">
+                                <li><img src="/static/images/vegan-filter.svg" alt="вегетерианские"></li>
+                                <li><img src="/static/images/sugarfree-filter.svg" alt="без сахара"></li>
+                                <li><img src="/static/images/protein-filter.svg" alt="с протеином"></li>
+                                <li><img src="/static/images/lactosefree-filter.svg" alt="без лактозы"></li>
+                                <li><img src="/static/images/highfibre-filter.svg" alt="с клетчаткой"></li>
+                                <li><img src="/static/images/lowfat-filter.svg" alt="низкокалорийные"></li>
+                            </ul>
+                            <!-- ingredients -->
+                            <p><small><i>Ингредиенты:
+                                <strong>ячменные хлопья</strong>
+                            </i></small></p>
+                        </li>
+                        <li class="collection-item custom-mix-item">
+                            <!-- image-->
+                            <img src="/static/images/oat.webp" class="custom-mix-item-image">
+                            <!--title-->
+                            <h6><strong>Кунжут</strong></h6>
+                            <!--short description-->
+                            <p>Вкуснейшая добавка, проверенная временем <small>| 25г за 30,00 р.</small></p>
+                            <!--detail description-->
+                            <p>
+                                <small>
+                                    Изысканный и питательный продукт.
+                                </small>
+                            </p>
+                            <!-- filter -->
+                            <ul class="custom-mix-item-filter">
+                                <li><img src="/static/images/vegan-filter.svg" alt="вегетерианские"></li>
+                                <li><img src="/static/images/sugarfree-filter.svg" alt="без сахара"></li>
+                                <li><img src="/static/images/protein-filter.svg" alt="с протеином"></li>
+                                <li><img src="/static/images/lactosefree-filter.svg" alt="без лактозы"></li>
+                                <li><img src="/static/images/highfibre-filter.svg" alt="с клетчаткой"></li>
+                            </ul>
+                            <!-- ingredients -->
+                            <p><small><i>Ингредиенты:
+                                <strong>семена кунжута</strong>
+                            </i></small></p>
+                        </li>
+                    </ul>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+             </div>
+        </section>
+        <section class="fixed-footer">
+            <div class="grey lighten-2 z-depth-2">
+                <!--visible order-->
+                <ul class="custom-mix-ingredients">
+                    <li><a href="#">основа</a></li>
+                    <li><a href="#">добавка</a></li>
+                </ul>
+                <!-- order -->
+                    <!-- base-->
+                <input type="hidden" name="base_id" value="id"/>
+                    <!-- addition-->
+                <input type="hidden" name="addition[0][id]" value="id"/>
+                <input type="hidden" name="addition[0][num]" value="num"/>
+                <input type="hidden" name="addition[1][id]" value="id"/>
+                <input type="hidden" name="addition[1][num]" value="num"/>
+                <input type="hidden" name="addition[2][id]" value="id"/>
+                <input type="hidden" name="addition[2][num]" value="num"/>
+                    <!-- fruits  -->
+                <input type="hidden" name="fruits[0][id]" value="id"/>
+                <input type="hidden" name="fruits[0][num]" value="num"/>
+                <input type="hidden" name="fruits[1][id]" value="id"/>
+                <input type="hidden" name="fruits[1][num]" value="num"/>
+                <input type="hidden" name="fruits[2][id]" value="id"/>
+                <input type="hidden" name="fruits[2][num]" value="num"/>
+                    <!-- nuts_seeds  -->
+                <input type="hidden" name="nuts_seeds[0][id]" value="id"/>
+                <input type="hidden" name="nuts_seeds[0][num]" value="num"/>
+                <input type="hidden" name="nuts_seeds[1][id]" value="id"/>
+                <input type="hidden" name="nuts_seeds[1][num]" value="num"/>
+                <input type="hidden" name="nuts_seeds[2][id]" value="id"/>
+                <input type="hidden" name="nuts_seeds[2][num]" value="num"/>
+                    <!-- choco -->
+                <input type="hidden" name="choco[0][id]" value="id"/>
+                <input type="hidden" name="choco[0][num]" value="num"/>
+                <input type="hidden" name="choco[1][id]" value="id"/>
+                <input type="hidden" name="choco[1][num]" value="num"/>
+                <input type="hidden" name="choco[2][id]" value="id"/>
+                <input type="hidden" name="choco[2][num]" value="num"/>
+                <ul class="custom-mix-ingredients right">
+                    <li><a href="#">вкус</a></a></li>
+                    <li><a href="#">инфо</a></li>
+                </ul>
+            </div>
+            <div class="custom-mix-footer valign-wrapper">
+                <div class="custom-mix-footer-price left">
+                    <p><strong>575г за 500 руб</strong></p>
+                    <p><small>86,95 руб за 100г без стоимости доставки</small></p>
+                </div>
+                <a class="waves-effect waves-light btn-large red darken-4 right">Заказать</a>
+            </div>
+        </section>
+    </main>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+</body>
+</html>
